@@ -1,5 +1,5 @@
 # Build with:
-# PHP v8.0.3
+# PHP v8.1
 # Composer v1 as symfony-flex not yet support v2
 # Apache
 # Yarn
@@ -7,7 +7,7 @@
 
 FROM composer:2 AS composer
 
-FROM php:8.0-apache
+FROM php:8.1-apache
 COPY --from=composer /usr/bin/composer /usr/local/bin/composer
 
 WORKDIR /app
